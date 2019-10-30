@@ -1,0 +1,48 @@
+ : '********************************************************************
+       Author    : Leslie Giron 
+       Course    : OS4 section. 
+       Professor : Michael Robinson 
+       Program # : pgm3f3_5OS and  program Purpose/Description 
+                   { A brief description of the program }
+                
+       Due Date  : 10/30/2019 
+                 
+       Certification: 
+       I hereby certify that this work is my own and none of it is the 
+	   work of any other person. 
+             
+  *********************************************************************'
+  
+  touch results.txt
+  echo "Leslie Giron" >> results.txt
+  date >> results.txt
+  
+  echo "Please enter a number."
+  read FirstNumber
+  echo "Please enter another numer."
+  read SecondNumber
+  RESULT = 0
+  while true
+  do
+  
+        if [ $FirstNumber == 44 ] || [ $SecondNumber == 44 ]; then
+		      break
+			  
+		elif [$SecondNumber == 0 ]; then
+              echo "You CAN NOT divide by zero, please choose another number"
+            read SecondNumber
+			echo "$FirstNumber divided by $SecondNUmber = $RESULT"	
+            echo "$FirstNumber divided by $SecondNUmber = $RESULT" >> results.txt
+			
+        else 			  
+		    RESULT = `expr $FirstNumber / SecondNumber`
+            echo "$FirstNumber divided by $SecondNUmber = $RESULT"	
+            echo "$FirstNumber divided by $SecondNUmber = $RESULT" >> results.txt			
+        fi
+		
+done
+
+echo
+
+# wget -O http://users.cis.fiu.edu/~mrobi002/downloads/HumanGenome/VenterGraig/VGuncompressed/hs_alt_HuRef_chr10.fa  
+# head -n 1995 | grep ACGT /filepath/ http://users.cis.fiu.edu/~mrobi002/downloads/HumanGenome/VenterGraig/VGuncompressed/hs_alt_HuRef_chr10.fa | wc -w  
