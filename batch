@@ -1,0 +1,45 @@
+@echo off
+color F0
+title Pgm3
+
+GOTO Comment
+********************************************************************
+Author    : Leslie Giron 
+Course    : OS4 section. 
+Professor : Michael Robinson 
+Program # : pgm3f3_5OS Windows batch file
+            Creating a Windows batch file with Windows terminal 
+            commands    
+Due Date  : 10/30/2019 
+                 
+Certification: 
+I hereby certify that this work is my own and none of it is the 
+work of any other person. 
+             
+*********************************************************************
+:Comment
+
+echo Leslie Giron %DATE%, %TIME%
+:First
+setlocal
+set /p FirstNumber= Enter a number:
+
+
+if %FirstNumber% == 22 exit /B 0
+
+:while
+set /p SecondNumber= Enter another number :
+
+if %SecondNumber% == 22 exit /B 0
+
+if %SecondNumber% == 0 (
+echo You can't divide by zero
+goto :while
+)
+
+:Divide
+set /a result=%FirstNumber%/%SecondNumber% 
+
+echo %FirstNumber% divided by %SecondNumber% = %result%
+
+Pause
