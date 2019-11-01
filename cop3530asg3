@@ -1,0 +1,49 @@
+       public void replaceKey(Integer oldKey,Integer newKey)
+
+       {
+
+              boolean flag=false;
+
+              int i=0;    
+
+              for( i=1;i<size;i++)
+
+              {
+
+
+                    Integer temp=(Integer) heap[i];
+
+
+                    if(oldKey.compareTo(temp)==0)
+
+                    {
+
+                           flag=true;
+
+                           break;
+
+                    }
+
+              }
+
+
+              if(flag==false)
+
+              {
+
+                    System.out.println("old key is not exist in the heap.");
+
+              }
+
+
+              else
+
+              {
+
+                    heap[i]=(AnyType)newKey;
+
+                    buildHeap();   
+
+              }
+
+       }
