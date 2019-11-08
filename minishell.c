@@ -1,3 +1,6 @@
+//https://github.com/sisardor/Mini-shell/blob/master/src/minishell.c
+
+
 #include <stdlib.h>
 #include <stdio.h>
 
