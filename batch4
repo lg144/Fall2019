@@ -1,0 +1,41 @@
+@echo off
+color F0
+title Pgm4
+
+GOTO Comment
+********************************************************************
+Author    : Leslie Giron 
+Course    : OS4 section. 
+Professor : Michael Robinson 
+Program # : pgm4df_5OS Windows batch file
+            Creating a Windows batch file with Windows terminal 
+            commands    
+Due Date  : 11/13/2019 
+                 
+Certification: 
+I hereby certify that this work is my own and none of it is the 
+work of any other person. 
+             
+*********************************************************************
+:Comment
+
+
+@echo off &setlocal
+for /L %%i in (1, 1, 10) do (
+set /a CALULATE="(%%i%%6)+2"
+set /a TOTAL=TOTAL+CALCULATE
+call echo %%CALULATE%%
+)
+
+SET /A "AVERAGE=(%TOTAL% / 10)"
+ECHO AVverage of total calculations %AVERAGE%
+ECHO.
+@ECHO Average of total calculations is %AVERAGE% >> result.txt
+)
+
+md pgm4
+cd pgm4
+echo ::Leslie>> one.txt
+echo set name=Leslie >>one.txt
+echo echo %%name%% >>one.txt
+echo echo. >>one.txt
